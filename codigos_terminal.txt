@@ -1,0 +1,4 @@
+build web para o canvaskit realise - flutter build web --web-renderer canvaskit
+
+build web para o canvaskit debug - flutter run -d chrome --web-renderer canvaskit
+

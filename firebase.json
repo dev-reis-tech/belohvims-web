@@ -1,0 +1,1 @@
+{"hosting":{"target": "lovetter-web","public":"build/web","ignore":["firebase.json","**/.*","**/node_modules/**"],"rewrites":[{"source":"**","destination":"/index.html"}]},"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"lohvim-s","configurations":{"web":"1:957929550061:web:3faa7695449e604c575ce4"}}}}}}

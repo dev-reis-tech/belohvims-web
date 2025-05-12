@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "lohvim-s"
+  },
+  "targets": {
+    "lohvim-s": {
+      "hosting": {
+        "lovetter-web": [
+          "lohvim-s-bfb31"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

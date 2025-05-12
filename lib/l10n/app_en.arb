@@ -1,0 +1,147 @@
+{
+    "language":"English",
+    "@language": {
+        "description": "The Current Language"
+    },
+
+    "descriptionAppMainPage": "The application was made for loving couples who enjoy caring for each other",
+    
+  "@descriptionAppMainPage": {
+        "description": "Description of the app's purpose on the main page"
+    },
+
+        "@@comment":"translation main page",
+
+        "addPartner": "Add Partner",
+        "@addPartner": {
+        "description": "Button label for adding a partner"
+        },
+
+        "exitAccount": "Log Out",
+        "@exitAccount": {
+        "description": "Button label for logging out of the account"
+        },
+
+        "userInfo": "User Information",
+        "@userInfo": {
+        "description": "Title for the user information section"
+        },
+        
+        "changeLanguage": "Change Language",
+        "@changeLanguage": {
+        "description": "change the application language"
+        },
+
+        "clickDescription": "See Description",
+        "@clickDescription": {
+            "description": "Button label for the click description"
+        },
+
+    "@@comment":"info user page",
+
+        "email": "Email:",
+        "@email": {
+        "description": "Label for the user's email address"
+        },
+
+        "name": "Name:",
+        "@name": {
+        "description": "Label for the user's name"
+        },
+
+        "securityCode": "Security Code:",
+        "@securityCode": {
+        "description": "Label for the user's security code"
+        },
+
+        "partnerName": "Partner's Name:",
+        "@partnerName": {
+        "description": "Label for the partner's name"
+        },
+
+        "phoneNumber": "Phone Number:",
+        "@phoneNumber": {
+        "description": "Label for the user's phone number"
+        },
+
+        "emailNotfound": "Email not found",
+        "@emailNotfound": {
+            "description": "Error message when the email is not found"
+        },
+        
+        "nameNotfound": "User name not found",
+        "@nameNotfound": {
+            "description": "Error message when the user's name is not found"
+        },
+        
+        "securityCodeNotfound": "Security code not found",
+        "@securityCodeNotfound": {
+            "description": "Error message when the security code is not found"
+        },
+        
+        "partnerNameNotFound": "Does not have a partner",
+        "@partnerNameNotFound": {
+            "description": "Message displayed when the partner's name is not found"
+        },
+        
+        "phoneNumberNotFound": "Phone number not found",
+        "@phoneNumberNotFound": {
+            "description": "Error message when the phone number is not found"
+        },
+
+    "@@comment": "Info Diary",
+        "infoDiaryUser": "User Diary Information",
+        "@infoDiaryUser": {
+            "description": "Title for the user's diary information section"
+        },
+        "infoDiaryUserNotFound": "User diary information not found",
+        "@infoDiaryUserNotFound": {
+            "description": "Error message when user diary data is unavailable"
+        },
+        
+        "diaryName": "Diary Name",
+        "@diaryName": {
+            "description": "Label for the diary's name field"
+        },
+        "diaryNameNotFound": "Diary name not found",
+        "@diaryNameNotFound": {
+            "description": "Error when diary name is unavailable"
+        },
+
+        "datingDate": "Dating Anniversary Date",
+        "@datingDate": {
+            "description": "Label for the relationship anniversary date field"
+        },
+        "datingDateNotFound": "Dating anniversary date not found",
+        "@datingDateNotFound": {
+            "description": "Error for missing relationship date"
+        },
+
+        "diaryCreationDate": "Diary Creation Date",
+        "@diaryCreationDate": {
+            "description": "Label for the diary creation timestamp"
+        },
+        "diaryCreationDateNotFound": "Creation date not found",
+        "@diaryCreationDateNotFound": {
+            "description": "Error when creation timestamp is missing"
+        },
+
+        "partner": "Partner",
+        "@partner": {
+            "description": "Label for the partner's name field"
+        },
+        "partnerNotFound": "Partner information not found",
+        "@partnerNotFound": {
+            "description": "Error when partner details are unavailable"
+        },
+
+        "@@comment": "Lovetter Item",
+        
+        "lovetterDescription": "Make a special letter for your loved one \n -Write the text you want \n -Place up to 5 photos you want in the letter",
+        "@lovetterDescription": {
+            "description": "Lovetter description"
+        }
+
+        
+
+}

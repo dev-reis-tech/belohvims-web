@@ -1,0 +1,47 @@
+{
+    "@@comment": "Translation Main Page",
+        "language": "Spanish",
+
+        "descriptionAppMainPage": "La aplicación fue creada para parejas enamoradas que disfrutan cuidarse mutuamente",
+
+        "addPartner": "Agregar Pareja",
+        "exitAccount": "Cerrar Sesión",
+        "userInfo": "Información del Usuario",
+        "changeLanguage":"Cambiar idioma",
+        "clickDescription": "ver descripción",
+  
+    "@@comment": "page user info",
+  
+        "email": "Correo Electrónico:",
+            "emailNotfound": "Correo electrónico no encontrado",
+        "name": "Nombre:",
+            "nameNotfound": "Nombre de usuario no encontrado",
+        "securityCode": "Código de Seguridad:",
+            "securityCodeNotfound": "Código de seguridad no encontrado",
+        "partnerName": "Nombre de la Pareja:",
+            "partnerNameNotFound": "No tiene compañero(a)",
+        "phoneNumber": "Número de Teléfono:",
+            "phoneNumberNotFound": "Número de teléfono no encontrado",
+
+    "@@comment": "Diary Info",
+        "infoDiaryUser": "Información del Diario del Usuario",
+        "infoDiaryUserNotFound": "Información del diario no encontrada",
+
+        "diaryName": "Nombre del Diario",
+        "diaryNameNotFound": "Nombre del diario no encontrado",
+
+        "datingDate": "Fecha de Aniversario de la Relación",
+        "datingDateNotFound": "Fecha de aniversario no encontrada",
+
+        "diaryCreationDate": "Fecha de Creación del Diario",
+        "diaryCreationDateNotFound": "Fecha de creación no encontrada",
+
+        "partner": "Pareja",
+        "partnerNotFound": "Información de pareja no encontrada",
+
+    "@@comment": "Lovetter Item",
+        "lovetterDescription": "Haz una carta especial para tu ser querido \n -Escribe el texto que quieras \n -Coloca hasta 5 fotos que quieras en la carta"
+        
+
+    
+}
