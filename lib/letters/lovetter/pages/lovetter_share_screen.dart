@@ -105,7 +105,6 @@ class _ShareLovetterPageState extends State<_ShareLovetterPage> {
         _player.play();
       });
     }
-    print('imagens ${widget.lovetter.images?[0].imagePath}');
   }
 
   @override
@@ -177,8 +176,7 @@ class _OpenLovetterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appState = Provider.of<AppStateProvider>(context);
-    return lovetter != null
-        ? Scaffold(
+    return Scaffold(
           body: Column(
               // crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -254,74 +252,7 @@ class _OpenLovetterWidget extends StatelessWidget {
                 ],
               ],
             ),
-        )
-        : //LovetterOb
-        Column(
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              appState.isUnlocked == false
-                  ? Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text("De: ${lovetter?.from}",
-                            style: const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold)),
-                        Text("Para: ${lovetter?.to}",
-                            style: const TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold)),
-                      ],
-                    )
-                  : const SizedBox.shrink(),
-              const SizedBox(height: 10),
-              if (lovetter?.lovetterPassword != null &&
-                  !appState.isUnlocked) ...[
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TextField(
-                    controller: passwordController,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: "Digite a senha",
-                      suffixIcon: IconButton(
-                        icon: const Icon(Icons.lock_open),
-                        onPressed: () {
-                          if (passwordController.text ==
-                              lovetter?.lovetterPassword) {
-                            appState.toggleIsUnlocked();
-                          } else {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text("Senha incorreta!")),
-                            );
-                          }
-                        },
-                      ),
-                    ),
-                  ),
-                ),
-                if (lovetter?.lovetterPasswordHint != null)
-                  Text("Dica: ${lovetter?.lovetterPasswordHint}",
-                      style: const TextStyle(fontSize: 14, color: Colors.grey)),
-                const SizedBox(height: 20),
-              ] else ...[
-                // Row(
-                //   children: [
-                //     Text("De: ${lovetterSave.lovetterSaveModel?.from}",
-                //         style: const TextStyle(
-                //             fontSize: 16, fontWeight: FontWeight.bold)),
-                //     Text("Para: ${lovetterSave.lovetterSaveModel?.to}",
-                //         style: const TextStyle(
-                //             fontSize: 16, fontWeight: FontWeight.bold)),
-                //   ],
-                // ),
-                appState.isUnlocked == false
-                    ? ElevatedButton(
-                        onPressed: () => appState.toggleIsUnlocked(),
-                        child: const Text("Abrir Carta"),
-                      )
-                    : const SizedBox.shrink(),
-              ],
-            ],
-          );
+        );
+       
   }
 }

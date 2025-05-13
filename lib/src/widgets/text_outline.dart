@@ -6,6 +6,7 @@ class TextOutline extends StatelessWidget {
     super.key,
     required this.text,
     required this.textStyle,
+    this.textAlign,
     required this.blurRadius,
     required this.dx,
     required this.dy,
@@ -15,6 +16,7 @@ class TextOutline extends StatelessWidget {
 
   final String text;
   final TextStyle textStyle;
+  final TextAlign? textAlign;
   final Color? colorText;
   final Color? colorBorder;
   final double blurRadius;
@@ -26,7 +28,9 @@ class TextOutline extends StatelessWidget {
     return Stack(
       children: [
         Text(
+          
           text,
+          textAlign: textAlign,
           style: textStyle.copyWith(
             color: colorBorder ?? Colors.white,
             shadows: [

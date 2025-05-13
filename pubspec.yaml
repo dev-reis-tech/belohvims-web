@@ -48,6 +48,8 @@ dependencies:
   get_it: ^8.0.3
   url_strategy: ^0.3.0
   provider: ^6.1.5
+  http: ^1.4.0
+  emoji_regex: ^0.0.5
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,7 @@
 // import 'package:apointeli/src/models/models_build/users_model.dart';
 // import 'package:dio/dio.dart';
 
+import 'package:emoji_regex/emoji_regex.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
@@ -173,7 +174,59 @@ void toggleIsUnlocked(){
     );
   }
 
+/// Converte um texto que pode conter emojis em um InlineSpan
+/// que intercala texto normal e imagens de emoji (via Twemoji).
+TextSpan parseEmojiText(String text, TextStyle style) {
+  final pattern = emojiRegex();            // _pattern_ completo de emojis
+  final regex   = RegExp('$pattern');
+  final spans   = <InlineSpan>[];
+  int lastEnd   = 0;
 
+  for (final m in regex.allMatches(text)) {
+    // 1) Texto antes do emoji
+    if (m.start > lastEnd) {
+      spans.add(TextSpan(
+        text: text.substring(lastEnd, m.start),
+        style: style,
+      ));
+    }
+
+    // 2) O próprio emoji
+    final emoji = m.group(0)!;
+    // transforma cada codeUnit em hex e junta com '-'
+    final code = emoji.runes
+        .map((r) => r.toRadixString(16))
+        .join('-');
+    // URL Twemoji
+    final url  = 'https://twemoji.maxcdn.com/v/latest/72x72/$code.png';
+
+    spans.add(WidgetSpan(
+      alignment: PlaceholderAlignment.middle,
+      child: Image.network(
+        url,
+        width: style.fontSize,
+        height: style.fontSize,
+        // se Twemoji não carregar, mantém o espaço
+        errorBuilder: (_, __, ___) => SizedBox(
+          width: style.fontSize,
+          height: style.fontSize,
+        ),
+      ),
+    ));
+
+    lastEnd = m.end;
+  }
+
+  // 3) Resto do texto após o último emoji
+  if (lastEnd < text.length) {
+    spans.add(TextSpan(
+      text: text.substring(lastEnd),
+      style: style,
+    ));
+  }
+
+  return TextSpan(children: spans);
+}
 
   // Future<List<UsersModel>> fetchUsersFromDB() async {
   //   final db = await DBFlite.instance.database;

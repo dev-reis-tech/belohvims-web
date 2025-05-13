@@ -12,7 +12,7 @@ class MainPage extends StatelessWidget {
       body: Container(
         child: Center(
           child: Text(
-              'Página está sendo construída no momento, versão web: Pré-alpha v.0.1.8'),
+              'Página está sendo construída no momento, versão web: Pré-alpha v.0.1.9'),
         ),
       ),
     );
